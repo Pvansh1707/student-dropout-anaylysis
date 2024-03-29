@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Data</title>
+    <script>
+        // JavaScript validation functions can be added here if needed
+        // For example, you can add custom JavaScript functions to validate specific fields
+    </script>
+</head>
+<body>
+    <h2>Add New Data</h2>
+    <form action="/add_data" method="post">
+        <label for="academic">Academic:</label>
+        <input type="text" id="academic" name="academic" maxlength="10" required><br><br>
+
+        <label for="aadhaar_uid">Aadhaar UID:</label>
+        <input type="text" id="aadhaar_uid" name="aadhaar_uid" maxlength="20" required><br><br>
+
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" maxlength="100" required><br><br>
+
+        <label for="father_name">Father Name:</label>
+        <input type="text" id="father_name" name="father_name" maxlength="100" required><br><br>
+
+        <label for="mother_name">Mother Name:</label>
+        <input type="text" id="mother_name" name="mother_name" maxlength="100" required><br><br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" maxlength="100" required><br><br>
+
+        <label for="cluster_id">Cluster ID:</label>
+        <input type="text" id="cluster_id" name="cluster_id" maxlength="20" required><br><br>
+
+        <label for="village">Village:</label>
+        <input type="text" id="village" name="village" maxlength="15" required><br><br>
+
+        <label for="school">School:</label>
+        <input type="text" id="school" name="school" maxlength="100" required><br><br>
+
+        <label for="schmg">Schmg:</label>
+        <input type="text" id="schmg" name="schmg" maxlength="10" required><br><br>
+
+        <label for="reason_text">Reason Text:</label>
+        <input type="text" id="reason_text" name="reason_text" maxlength="255" required><br><br>
+
+        <label for="reason_code">Reason Code:</label>
+        <input type="number" id="reason_code" name="reason_code" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" maxlength="10" required><br><br>
+
+        <label for="taluka">Taluka:</label>
+        <input type="text" id="taluka" name="taluka" maxlength="15" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Location</title>
+</head>
+<body>
+    <h2>Select Location</h2>
+    <form action="/search" method="post">
+        <label for="district">District:</label>
+        <select name="district" id="district">
+            {% for district in districts %}
+                <option value="{{ district }}">{{ district }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="taluka">Taluka:</label>
+        <input type="text" id="taluka" name="taluka"><br><br>
+
+        <label for="village">Village:</label>
+        <input type="text" id="village" name="village"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

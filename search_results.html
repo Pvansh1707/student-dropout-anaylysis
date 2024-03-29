@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h2>Search Results</h2>
+    <table border="1">
+        <tr>
+            <th>School ID</th>
+            <th>Name</th>
+            <th>District</th>
+            <th>Taluka</th>
+            <th>Village</th>
+            <th>Gender</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% if 'school_id' in session %}
+    <form action="/add_data" method="get">
+        <input type="submit" value="Add New Data">
+    </form>
+    {% endif %}
+    
+    <h2>Search Users</h2>
+    <form action="/search" method="post">
+        <label for="district">District:</label>
+        <input type="text" id="district" name="district"><br><br>
+
+        <label for="taluka">Taluka:</label>
+        <input type="text" id="taluka" name="taluka"><br><br>
+
+        <label for="village">Village:</label>
+        <input type="text" id="village" name="village"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
